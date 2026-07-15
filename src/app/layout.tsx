@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'JT Studio | Desenvolvimento Web',
+  title: 'zuxia',
   description:
     'Desenvolvimento de sites e sistemas para pequenas e médias empresas.',
   icons: {

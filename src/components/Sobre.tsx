@@ -26,7 +26,7 @@ export default function Sobre() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Sobre a{' '}
             <span className="bg-gradient-to-r from-[#6b21a8] to-[#3b82f6] bg-clip-text text-transparent">
-              JT Studio
+              Zuxia
             </span>
           </h2>
         </div>
@@ -35,9 +35,8 @@ export default function Sobre() {
           {/* Texto */}
           <div className="flex flex-col gap-6">
             <p className="text-[#94a3b8] text-lg leading-relaxed">
-              A JT Studio nasceu com um propósito claro: levar tecnologia de
-              qualidade para pequenas e médias empresas que querem crescer no
-              digital sem complicação.
+              Levamos tecnologia de qualidade para pequenas e médias empresas
+              que querem crescer no digital sem complicação.
             </p>
             <p className="text-[#94a3b8] text-lg leading-relaxed">
               Criamos sites e sistemas modernos, rápidos e funcionais — sempre

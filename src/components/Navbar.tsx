@@ -11,9 +11,11 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#inicio" className="flex items-center gap-1">
-          <span className="text-[#3b82f6] font-bold text-lg">&lt;</span>
-          <span className="text-white font-bold tracking-wide">JT Studio</span>
-          <span className="text-[#6b21a8] font-bold text-lg">/&gt;</span>
+          <span className="text-[#94a3b8] font-bold text-lg">&lt;</span>
+          <span className="bg-gradient-to-r from-[#14b8a6] to-[#a855f7] bg-clip-text text-transparent font-bold tracking-wide">
+            zuxia
+          </span>
+          <span className="text-[#94a3b8] font-bold text-lg">/&gt;</span>
         </a>
 
         {/* Menu Desktop */}

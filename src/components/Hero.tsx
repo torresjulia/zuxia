@@ -27,7 +27,7 @@ export default function Hero() {
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
           Bem-vindo à{' '}
           <span className="bg-gradient-to-r from-[#6b21a8] to-[#3b82f6] bg-clip-text text-transparent">
-            JT Studio
+            zuxia
           </span>
         </h1>
 
