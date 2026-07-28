@@ -1,4 +1,7 @@
+'use client';
+
 import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 
 const projetos = [
   {
@@ -9,6 +12,7 @@ const projetos = [
     tecnologias: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     link: 'https://sorriso-pleno.vercel.app',
     github: 'https://github.com/torresjulia/sorriso-pleno',
+    imagem: '/images/sorriso-pleno.png',
     cor: 'from-[#1a1a2e] to-[#2a1a4e]',
     destaque: '#C9A84C',
   },
@@ -20,6 +24,7 @@ const projetos = [
     tecnologias: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     link: 'https://mesa-e-afeto.vercel.app',
     github: 'https://github.com/torresjulia/mesa-e-afeto',
+    imagem: '/images/mesa-e-afeto.png',
     cor: 'from-[#2a1a0e] to-[#3a2a1e]',
     destaque: '#c8956c',
   },
@@ -31,6 +36,7 @@ const projetos = [
     tecnologias: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     link: 'https://versa-motors.vercel.app',
     github: 'https://github.com/torresjulia/versa-motors',
+    imagem: '/images/versa-motors.png',
     cor: 'from-[#1a0a0a] to-[#2a1010]',
     destaque: '#ef4444',
   },
@@ -42,6 +48,7 @@ const projetos = [
     tecnologias: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     link: 'https://belle-noiva-studio.vercel.app',
     github: 'https://github.com/torresjulia/belle-noiva-studio',
+    imagem: '/images/belle-noiva-studio.png',
     cor: 'from-[#2a1020] to-[#3a1a2e]',
     destaque: '#f9a8d4',
   },
@@ -74,16 +81,27 @@ export default function Projetos() {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projetos.map((projeto) => (
-            <div
+            <a
               key={projeto.titulo}
-              className="bg-[#110f1a] border border-[#6b21a8]/20 rounded-2xl overflow-hidden hover:border-[#6b21a8]/50 transition-all group"
+              href={projeto.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#110f1a] border border-[#6b21a8]/20 rounded-2xl overflow-hidden hover:border-[#6b21a8]/50 transition-all group cursor-pointer block"
             >
               {/* Preview colorido */}
               <div
-                className={`h-40 bg-gradient-to-br ${projeto.cor} flex items-center justify-center relative`}
+                className={`h-40 bg-gradient-to-br ${projeto.cor} flex items-end justify-start relative overflow-hidden`}
               >
+                <Image
+                  src={projeto.imagem}
+                  alt={`Preview do projeto ${projeto.titulo}`}
+                  fill
+                  className="object-cover object-top"
+                />
+                {/* Gradiente sobre a imagem para o título ficar legível */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <span
-                  className="text-2xl font-bold"
+                  className="relative z-10 text-lg font-bold px-4 pb-3 drop-shadow-lg"
                   style={{ color: projeto.destaque }}
                 >
                   {projeto.titulo}
@@ -119,20 +137,16 @@ export default function Projetos() {
 
                 {/* Links */}
                 <div className="flex gap-4">
-                  <a
-                    href={projeto.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-white hover:text-[#3b82f6] transition-colors"
-                  >
+                  <span className="flex items-center gap-2 text-sm text-white group-hover:text-[#3b82f6] transition-colors">
                     <ExternalLink size={16} />
                     Ver site
-                  </a>
+                  </span>
 
                   <a
                     href={projeto.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
                     className="flex items-center gap-2 text-sm text-[#94a3b8] hover:text-white transition-colors"
                   >
                     <svg
@@ -148,7 +162,7 @@ export default function Projetos() {
                   </a>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
