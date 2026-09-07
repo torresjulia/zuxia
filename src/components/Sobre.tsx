@@ -6,8 +6,8 @@ const tecnologias = [
   'TypeScript',
   'Tailwind CSS',
   'Node.js',
+  'NestJS',
   'PostgreSQL',
-  'Git',
   'Figma',
 ];
 
@@ -40,8 +40,9 @@ export default function Sobre() {
             </p>
             <p className="text-[#94a3b8] text-lg leading-relaxed">
               Criamos sites e sistemas modernos, rápidos e funcionais — sempre
-              com atenção aos detalhes e ao impacto real que uma presença
-              digital bem feita gera no negócio do cliente.
+              com atenção aos detalhes e à identidade de cada negócio. Porque
+              uma presença digital bem feita, que realmente representa quem você
+              é, transforma a forma como seus clientes te enxergam.
             </p>
 
             {/* Cards de destaque */}

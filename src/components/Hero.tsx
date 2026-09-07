@@ -56,7 +56,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://wa.me/5519999999999?text=Olá,%20vim%20pelo%20portfólio%20e%20gostaria%20de%20conversar!"
+            href="https://wa.me/5519995802332?text=Olá,%20vim%20pelo%20portfólio%20e%20gostaria%20de%20conversar!"
             target="_blank"
             rel="noopener noreferrer"
             className="border border-[#6b21a8]/50 text-white px-8 py-4 rounded-full font-medium hover:border-[#6b21a8] hover:bg-[#6b21a8]/10 transition-all"
@@ -102,7 +102,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://wa.me/5519999999999"
+            href="https://wa.me/5519995802332"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#94a3b8] hover:text-white transition-colors"

@@ -81,12 +81,18 @@ export default function Projetos() {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projetos.map((projeto) => (
-            <a
+            <div
               key={projeto.titulo}
-              href={projeto.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#110f1a] border border-[#6b21a8]/20 rounded-2xl overflow-hidden hover:border-[#6b21a8]/50 transition-all group cursor-pointer block"
+              onClick={() =>
+                window.open(projeto.link, '_blank', 'noopener,noreferrer')
+              }
+              role="link"
+              tabIndex={0}
+              onKeyDown={(e) =>
+                e.key === 'Enter' &&
+                window.open(projeto.link, '_blank', 'noopener,noreferrer')
+              }
+              className="bg-[#110f1a] border border-[#6b21a8]/20 rounded-2xl overflow-hidden hover:border-[#6b21a8]/50 transition-all group cursor-pointer"
             >
               {/* Preview colorido */}
               <div
@@ -96,6 +102,7 @@ export default function Projetos() {
                   src={projeto.imagem}
                   alt={`Preview do projeto ${projeto.titulo}`}
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover object-top"
                 />
                 {/* Gradiente sobre a imagem para o título ficar legível */}
@@ -162,7 +169,7 @@ export default function Projetos() {
                   </a>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

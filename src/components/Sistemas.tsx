@@ -34,7 +34,7 @@ const sistemas = [
     titulo: 'Dashboard Administrativo',
     descricao:
       'Painel administrativo com autenticação JWT, gráficos em tempo real, relatórios e proteção de rotas.',
-    tecnologias: ['Next.js', 'TypeScript', 'PostgreSQL', 'JWT', 'Recharts'],
+    tecnologias: ['Next.js', 'TypeScript', 'Nest.js', 'PostgreSQL', 'JWT', 'Recharts'],
     status: 'Em desenvolvimento',
   },
 ];

@@ -82,8 +82,7 @@ export default function Contato() {
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-[#6b21a8]/20 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[#94a3b8] text-sm">
-            © {new Date().getFullYear()} JT Studio — Todos os direitos
-            reservados
+            © {new Date().getFullYear()} zuxia — Todos os direitos reservados
           </p>
           <div className="flex items-center gap-6">
             <a
@@ -103,7 +102,7 @@ export default function Contato() {
               LinkedIn
             </a>
             <a
-              href="https://wa.me/5519999999999"
+              href="https://wa.me/5519995802332"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#94a3b8] hover:text-white transition-colors text-sm"
